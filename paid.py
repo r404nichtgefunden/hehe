@@ -10,7 +10,7 @@ TOKEN = "7546151966:AAFgS-fxE-YwuBqsMleeA8Bge9fUCvYqn0k"
 # /start command
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     help_text = (
-        "*STX Bot Help*\n\n"
+        "*STX Bot by @Suttdiam69*\n\n"
         "Available commands:\n"
         "/permit — `Send this command to use the bot`\n"
         "/stx `<ip> <port> <durasi>`\n\n"
