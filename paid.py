@@ -12,7 +12,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     help_text = (
         "*STX Bot Help*\n\n"
         "Available commands:\n"
-        "/permit — `Send this command to use the bot`"
+        "/permit — `Send this command to use the bot`\n"
         "/stx `<ip> <port> <durasi>`\n\n"
         "*Example:*\n"
         "`/stx 1.1.1.1 80 60`"
@@ -23,7 +23,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def permit(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
         subprocess.run(["chmod", "+x", "stx"], check=True)
-        await update.message.reply_text("Permission granted: `chmod +x stx`", parse_mode=ParseMode.MARKDOWN)
+        await update.message.reply_text("Permission granted", parse_mode=ParseMode.MARKDOWN)
     except subprocess.CalledProcessError as e:
         await update.message.reply_text(f"Error:\n`{e}`", parse_mode=ParseMode.MARKDOWN)
 
